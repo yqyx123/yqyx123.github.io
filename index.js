@@ -8,7 +8,7 @@ let aa =
 		},
 		{
 			"bt": "asp.net 制作简单接口",
-			"sj": "2022-2-17",
+			"sj": "2022-10-06",
 			"desc": "1.创建asp.net web应用程序，选择空点击创建。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.选中创建好的项目名字，右键选择 添加-新建项，找到web服务(asmx)点击添加。 ",
                                                   "url":"http://t.csdnimg.cn/fzf95"
 		},

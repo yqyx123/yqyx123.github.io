@@ -1,18 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+		<link rel="stylesheet" href="index.css">
+		<script type='text/javascript' src='index.js'></script>
+		<title>洋气又优秀</title>
+		<script type="text/javascript">
+			if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+				alert('朋友，上古浏览器不支持呢~');
+			}
+		</script>
+	</head>
+	<body>
+		<div id="body-wrap">
+			<!--头部-->
+			<nav class="not_index_bg" id="nav">
+				<!--打字机效果-->
+				<div id="page_site-info">
+					<div id="site-title">
+						<span class="blogtitle"></span>
+						<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+						<script>
+							var typed = new Typed(".blogtitle", {
+								strings: ['欢迎访问洋气又优秀', 'Youth means limitless possibilities.'],
+								startDelay: 300,
+								typeSpeed: 100,
+								loop: true,
+								backSpeed: 50,
+								showCursor: true
+							});
+						</script>
+					</div>
+				</div>
+			</nav>
+			<!--主体部分-->
+			<main id="content-outer">
+				<div class="layout_page" id="content-inner">
+					<div class="aside_content" id="aside_content">
+						<!--下载部分-->
+						<div class="card-info-avatar is-center card-widget" >
+							<div class="author-info__name" style="font-size: 25px;"><b>洋气又优秀APP下载地址</b></div>
+							<!--安卓部分-->
+							
+							<div class="xz">
+								<a href="#" onClick="return confirm('建设中！');">
+									<img style=" filter: drop-shadow(yellow);"  class="avatar-img" src="https://gitee.com/YQYYX/image/raw/master/my/001.png"
+										alt="Android">
+									<div class="author-info__name">Android</div>
+									</a>
+							</div>
+							
+							<!--IOS部分-->
+							<div class="xz">
+								<a href="#" onClick="return confirm('建设中！');">
+									<img class="avatar-img" src="https://gitee.com/YQYYX/image/raw/master/my/002.png" alt="IOS">
+									<div class="author-info__name">IOS</div>
+									</a>
+							</div>
+							<!--Windows部分-->
+							
+							<div class="xz">
+								<a href="#" onClick="return confirm('建设中！');">
+									<img class="avatar-img" src="https://gitee.com/YQYYX/image/raw/master/my/003.png"
+										alt="Windows">
+									<div class="author-info__name">Windows</div>
+									</a>
+							</div>
+							<!--Harmony OS部分-->
+							
+							<div class="xz">
+								<a href="#" onClick="return confirm('建设中！');">
+									<img class="avatar-img" src="https://gitee.com/YQYYX/image/raw/master/my/004.png"
+										alt="Harmony OS">
+									<div class="author-info__name">Harmony OS</div>
+								</a>	
+							</div>
+						</div>
+						<!--一言-->
+						<div class="card-widget card-announcement">
+							<div class="card-content">
+								<div class="item-headline">
+									<i class="fa fa-bullhorn" aria-hidden="true"></i>
+									<span>一言</span>
+								</div>
+								<div id="hitokoto"></div>
+							</div>
+						</div>
+						<!--今日诗词-->
+						<div class="card-widget card-announcement">
+							<div class="card-content">
+								<div class="item-headline">
+									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<span>今日诗词</span>
+								</div>
+								<div id="jinrishici-sentence"></div>
+							</div>
+						</div>
+						<!--站点信息-->
+						<div class="card-widget card-webinfo">
+							<div class="card-content">
+								<div class="item-headline">
+									<i class="fa fa-line-chart" aria-hidden="true"></i>
+									<span>站点信息</span>
+								</div>
+								<div class="webinfo">
+									<div class="webinfo-item">
+										<div class="webinfo-site-uv-name">本站访客数 :</div>
+										<div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
+									</div>
+									<div class="webinfo-item">
+										<div class="webinfo-site-name">本站总访问量 :</div>
+										<div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<article id="page">
+						<div>
+							<h2>音乐台</h2>
+							<hr>
+							<meting-js auto="https://music.163.com/#/playlist?id=3778678" list-folded="true">
+							</meting-js>
+							<hr>
+							<!--文章-->
+							<div id="wenzhang">
+							</div>
+							<script type="text/javascript">
+								var json = aa;
+								// 自定义字符串,用于拼接标签
+								var str = "";
+								for (var i = 0; i < json.length; i++) {
+									str += '<div>' +
+										'<div style="text-align: center;">' +
+										json[i].bt +
+										'</div>' +
+										'<div style="text-align: center; color: #d0d0d0;">' +
+										json[i].sj +
+										'</div>' +
+										'<div>' +
+										json[i].desc +
+										'</div>' +
+										'<a href="'+json[i].url+'" style="float: right;" target="_blank"> 查看全文&gt;&gt;' + '</a>' +
+										'<hr>' +
+										'</div>';
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>洋气又优秀</title>
-</head>
+								}
+								// 拼接完字符串数组后用innerHTML把它渲染到页面中
+								document.getElementById("wenzhang").innerHTML = str;
+							</script>
 
-<body>
 
-	<h1>我的第一个标题</h1>
-	<p>我的第一个段落。</p>
+						</div>
+					</article>
+				</div>
+			</main>
+			<footer id="footer">
+				<div id="footer-wrap">
+					<div class="copyright">&copy;2022 - 2024 BY 洋气又优秀</div>
+				</div>
+			</footer>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
+		<!-- aplayer、meting -->
+		<!-- require APlayer -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+		<!-- require MetingJS -->
+		<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-	<!-- 这里可以插入更多的HTML元素 -->
-</body>
+		<!-- nplayer -->
+		<script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
 
+		<!--   一言、今日诗词   -->
+		<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+		<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+		<!--鼠标点击效果-->
+		<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+
+		<script type="text/javascript">
+			console.clear();
+			console.log("%c 你终于来了.", "background:#24272A; color:#ffffff", "");
+			console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+
+
+			(function($) {
+				$.fn.snow = function(options) {
+					var $flake = $('<div id="snowbox" />').css({
+							'position': 'absolute',
+							'z-index': '9999',
+							'top': '-50px'
+						}).html('&#10052;'),
+						documentHeight = $(document).height(),
+						documentWidth = $(document).width(),
+						defaults = {
+							minSize: 10,
+							maxSize: 20,
+							newOn: 1000,
+							flakeColor: "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+						},
+						options = $.extend({}, defaults, options);
+					var interval = setInterval(function() {
+						var startPositionLeft = Math.random() * documentWidth - 100,
+							startOpacity = 0.5 + Math.random(),
+							sizeFlake = options.minSize + Math.random() * options.maxSize,
+							endPositionTop = documentHeight - 200,
+							endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+							durationFall = documentHeight * 10 + Math.random() * 5000;
+						$flake.clone().appendTo('body').css({
+							left: startPositionLeft,
+							opacity: startOpacity,
+							'font-size': sizeFlake,
+							color: options.flakeColor
+						}).animate({
+							top: endPositionTop,
+							left: endPositionLeft,
+							opacity: 0.2
+						}, durationFall, 'linear', function() {
+							$(this).remove()
+						});
+					}, options.newOn);
+				};
+			})(jQuery);
+			$(function() {
+				$.fn.snow({
+					minSize: 5,
+					/* 定义雪花最小尺寸 */
+					maxSize: 50,
+					/* 定义雪花最大尺寸 */
+					newOn: 700 /* 定义密集程度，数字越小越密集 */
+				});
+			});
+		</script>
+
+
+
+
+
+
+	</body>
 </html>
